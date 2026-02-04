@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isotope Economics Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Isotope Economics Explorer</h1>
+            <p>Understanding the financial realities of non-energy nuclear applications</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#comparison-tool">Comparison Tool</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
+                <li><a href="#economics-guide">Economics Guide</a></li>
+                <li><a href="#data-sources">Data Sources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="hero">
+            <div class="hero-content">
+                <h2>Explore the economics of isotope production and applications</h2>
+                <p>Interactive tools based on verified data from IAEA, OECD NEA, and leading research institutions</p>
+                <button id="start-exploring">Start Exploring</button>
+            </div>
+            <div class="hero-visualization">
+                <div id="isotope-animation"></div>
+            </div>
+        </section>
+
+        <section id="comparison-tool" class="tool-section">
+            <h2>Isotope Economics Comparison Tool</h2>
+            <div class="tool-controls">
+                <div class="control-group">
+                    <label for="isotope-select">Select Isotope:</label>
+                    <select id="isotope-select">
+                        <option value="tc99m">Technetium-99m (Medical)</option>
+                        <option value="co60">Cobalt-60 (Industrial/Medical)</option>
+                        <option value="i131">Iodine-131 (Medical)</option>
+                        <option value="mo99">Molybdenum-99 (Parent for Tc-99m)</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="production-method">Production Method:</label>
+                    <select id="production-method">
+                        <option value="reactor">Nuclear Reactor</option>
+                        <option value="accelerator">Particle Accelerator</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label for="production-scale">Production Scale:</label>
+                    <input type="range" id="production-scale" min="1" max="100" value="50">
+                    <span id="scale-value">Medium (50)</span>
+                </div>
+                <button id="compare-button">Compare</button>
+            </div>
+            <div class="tool-results">
+                <div id="cost-chart" class="chart-container"></div>
+                <div id="breakdown-chart" class="chart-container"></div>
+                <div class="data-verification">
+                    <p>Data verified from: <span id="data-source">IAEA Technical Reports (2024)</span></p>
+                    <p>Last updated: <span id="data-date">June 2024</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="case-studies">
+            <h2>Global Production Facilities Case Studies</h2>
+            <div id="facility-map"></div>
+            <div id="facility-details" class="hidden">
+                <h3 id="facility-name"></h3>
+                <div class="facility-stats">
+                    <div>
+                        <h4>Economic Indicators</h4>
+                        <ul id="economic-indicators"></ul>
+                    </div>
+                    <div>
+                        <h4>Production Capacity</h4>
+                        <ul id="production-capacity"></ul>
+                    </div>
+                </div>
+                <div id="facility-chart"></div>
+            </div>
+        </section>
+
+        <section id="economics-guide">
+            <h2>Interactive Economics Guide</h2>
+            <div class="guide-container">
+                <div class="guide-nav">
+                    <button class="guide-tab active" data-tab="cost-structure">Cost Structure</button>
+                    <button class="guide-tab" data-tab="market-dynamics">Market Dynamics</button>
+                    <button class="guide-tab" data-tab="policy-impacts">Policy Impacts</button>
+                </div>
+                <div class="guide-content">
+                    <div id="cost-structure" class="guide-panel active">
+                        <h3>Understanding Isotope Production Costs</h3>
+                        <div class="interactive-breakdown">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div id="market-dynamics" class="guide-panel">
+                        <h3>Global Market Dynamics</h3>
+                        <div class="market-visualization">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div id="policy-impacts" class="guide-panel">
+                        <h3>Policy Impact Simulator</h3>
+                        <div class="policy-simulator">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="data-sources">
+            <h2>Verified Data Sources</h2>
+            <div class="sources-grid">
+                <div class="source-card">
+                    <img src="images/iaea-logo.png" alt="IAEA Logo">
+                    <h3>International Atomic Energy Agency</h3>
+                    <p>Technical reports on isotope production economics</p>
+                    <a href="https://www.iaea.org/" target="_blank">Visit Source</a>
+                </div>
+                <div class="source-card">
+                    <img src="images/oecd-logo.png" alt="OECD NEA Logo">
+                    <h3>OECD Nuclear Energy Agency</h3>
+                    <p>Cost analysis of nuclear applications</p>
+                    <a href="https://www.oecd-nea.org/" target="_blank">Visit Source</a>
+                </div>
+                <div class="source-card">
+                    <img src="images/world-nuclear-logo.png" alt="World Nuclear Association Logo">
+                    <h3>World Nuclear Association</h3>
+                    <p>Market data on medical isotopes</p>
+                    <a href="https://www.world-nuclear.org/" target="_blank">Visit Source</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Isotope Economics Explorer | Data verified from authoritative sources</p>
+            <p>For educational purposes only | Not for clinical or commercial decision making</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

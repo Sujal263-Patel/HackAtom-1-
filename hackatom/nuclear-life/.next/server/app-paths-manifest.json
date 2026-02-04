@@ -1,0 +1,10 @@
+{
+  "/page": "app/page.js",
+  "/overview/page": "app/overview/page.js",
+  "/modules/page": "app/modules/page.js",
+  "/analysis/page": "app/analysis/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/simple-quiz/page": "app/simple-quiz/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/quiz/page": "app/quiz/page.js"
+}

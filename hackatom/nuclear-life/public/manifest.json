@@ -1,0 +1,40 @@
+{
+  "name": "IsoLearn - Isotope Education Platform",
+  "short_name": "IsoLearn",
+  "description": "Explore nuclear isotope applications in medicine, industry, agriculture, and space technology",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#06b6d4",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["education", "science", "technology"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Learning Modules",
+      "short_name": "Modules",
+      "url": "/modules",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Interactive Quiz",
+      "short_name": "Quiz",
+      "url": "/quiz",
+      "icons": [{ "src": "/icon-192x192.png", "sizes": "192x192" }]
+    }
+  ]
+}
